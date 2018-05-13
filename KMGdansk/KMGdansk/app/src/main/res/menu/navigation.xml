@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_favorites"
+        android:icon="@drawable/ic_favorites"
+        android:title="Ulubione" />
+
+    <item
+        android:id="@+id/tab_nearby"
+        android:icon="@drawable/ic_nearby"
+        android:title="Pobliskie" />
+
+    <item
+        android:id="@+id/tab_przystanki"
+        android:icon="@drawable/ic_przystanek"
+        android:title="Przystanki" />
+
+    <item
+        android:id="@+id/tab_linie"
+        android:icon="@drawable/baseline_departure_board_black_24"
+        android:title="Linie" />
+
+</menu>
