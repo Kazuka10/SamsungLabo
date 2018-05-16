@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_favorites"
+        icon="@drawable/ic_favorites"
+        title="Ulubione" />
+    <tab
+        id="@+id/tab_nearby"
+        icon="@drawable/ic_nearby"
+        title="Pobliskie" />
+    <tab
+        id="@+id/tab_friends"
+        icon="@drawable/ic_przystanek"
+        title="Przystanki" />
+    <tab
+        id="@+id/tab_friends2"
+        icon="@drawable/baseline_departure_board_black_24"
+        title="Linie" />
+
+</tabs>
