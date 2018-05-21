@@ -3,7 +3,7 @@ package com.samsunglabo.aplikacjaKM.fragmenty;
 import android.app.Activity;
 import android.os.Bundle;
 
-import net.simplifiedcoding.bottomnavigationexample.R;
+
 
 import org.osmdroid.api.IMapController;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
