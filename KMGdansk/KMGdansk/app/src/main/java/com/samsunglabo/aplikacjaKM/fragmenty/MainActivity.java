@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
 
         //loading the default fragment
-        Intent map_intent = new Intent(this, MapActivity.class);
+        Intent map_intent = new Intent(MainActivity.this, MapActivity.class);
         startActivity(map_intent);
-        //loadFragment(new HomeFragment());
+        loadFragment(new HomeFragment());
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
