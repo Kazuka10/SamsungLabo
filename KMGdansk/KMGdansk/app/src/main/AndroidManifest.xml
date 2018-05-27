@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.simplifiedcoding.bottomnavigationexample">
+    package="com.samsunglabo.aplikacjaKM.fragmenty">
 
     <application
         android:allowBackup="true"
@@ -17,6 +17,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MapActivity">
+        <intent-filter>
+            <action android:name="com.samsunglabo.KMGdansk.MapActivity" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
         </activity>
     </application>
 
