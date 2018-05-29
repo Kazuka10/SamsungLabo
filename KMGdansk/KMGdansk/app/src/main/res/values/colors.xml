@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorNavIcon">#747474</color>
+    <color name="colorNavText">#747474</color>
+
+        <color name="colorPrimary">#199DDA</color>
+        <color name="colorPrimaryDark">#23307B</color>
+        <color name="colorAccent">#199DDA</color>
+
+        <color name="yellow">#fec524</color>
+        <color name="pink">#E62565</color>
+        <color name="red">#ff0000</color>
+        <color name="green">#189431</color>
+
+        <color name="white">#ffffff</color>
+        <color name="black">#000000</color>
+        <color name="orange">#fa0</color>
+        <color name="black_semi_transparent">#B2000000</color>
+
+
+</resources>

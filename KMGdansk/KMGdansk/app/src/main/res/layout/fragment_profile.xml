@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tramNormalLabel"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@mipmap/ic_tramwaj1"
+                        android:id="@+id/imageView1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:id="@+id/label1"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/tramwajzwykly" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tramNormalTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:dividerPadding="10dp">
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tramSubstituteLabel"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/tramd"
+                        android:id="@+id/imageView7" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:id="@+id/label7"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/tramwajpospieszny" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tramExpressTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:dividerPadding="10dp">
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tramTouristicLabel"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/tramzastepczy"
+                        android:id="@+id/imageView8" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:id="@+id/label8"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/tramwajzastepczy" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tramSubTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:dividerPadding="10dp">
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/busNormalLabel"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/bus80"
+                        android:id="@+id/imageView2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:id="@+id/label2"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/autobuszwykły" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/busNormalTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:dividerPadding="10dp">
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/busExpressLabel"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/busd"
+                        android:id="@+id/imageView5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:id="@+id/label5"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/autobuspospieszny" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/busExpressTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:dividerPadding="10dp">
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/busSubstituteLabel"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/buszastepczy"
+                        android:id="@+id/imageView6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:id="@+id/label6"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/autobuszastepczy" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/busSubstituteTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:dividerPadding="10dp">
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/busNightLabel"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/bus80"
+                        android:id="@+id/imageView4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:id="@+id/label4"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/autobusnocny" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/busNightTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*"
+                    android:dividerPadding="10dp">
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/progresBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:animateLayoutChanges="true"
+            android:background="#000000"
+            android:layout_gravity="center"
+            android:visibility="gone" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
