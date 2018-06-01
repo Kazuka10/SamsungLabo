@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://F:\Pliki\Zasoby graficzne\do aplikacji\bottom-navigation-android-tutorial-master\bottom-navigation-android-tutorial-master\BottomNavigationExample.iml" filepath="F:\Pliki\Zasoby graficzne\do aplikacji\bottom-navigation-android-tutorial-master\bottom-navigation-android-tutorial-master\BottomNavigationExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KMGdansk.iml" filepath="$PROJECT_DIR$/KMGdansk.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bottom-navigation-android-tutorial-master.iml" filepath="$PROJECT_DIR$/bottom-navigation-android-tutorial-master.iml" />
     </modules>
