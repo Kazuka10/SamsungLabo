@@ -2,28 +2,31 @@ package com.samsunglabo.aplikacjaKM.fragmenty;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.osmdroid.config.Configuration;
+import com.samsunglabo.aplikacjaKM.resources.HttpFundation;
+import com.samsunglabo.aplikacjaKM.resources.ParseJSON;
+
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
-import org.osmdroid.views.overlay.MapEventsOverlay;
 import org.osmdroid.views.overlay.Marker;
-import org.osmdroid.views.overlay.Overlay;
 import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.infowindow.InfoWindow;
 import org.osmdroid.views.overlay.infowindow.MarkerInfoWindow;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 
 public class MapStationDetail extends Fragment {
@@ -38,7 +41,6 @@ public class MapStationDetail extends Fragment {
         View view = inflater.inflate(R.layout.activity_station, null);
         GeoPoint startPoint = new GeoPoint(mLat, mLon);
         mapView = (MapView) view.findViewById(R.id.mapView);
-      //  stationMarkerInfoWindow = new StationMarkerInfoWindow(R.layout.dymek_mapa_przystanek, mapView);
         mapView.setClickable(true);
         mapView.setBuiltInZoomControls(true);
         mapView.setMultiTouchControls(true);
@@ -46,7 +48,6 @@ public class MapStationDetail extends Fragment {
         mapView.getController().setZoom(17.0);
         mapView.getController().setCenter(startPoint);
 
-        //ArrayList<OverlayItem> stops = new ArrayList<>();
         stops.add(new OverlayItem("Jasień Pólnicy", "155, 161, 574", new GeoPoint(54.3502,18.6508)));
         stops.add(new OverlayItem("Zakoniczyn", "295, N1", new GeoPoint(54.31981,18.57735)));
         stops.add(new OverlayItem("Jaworzniaków", "156, 262, N1", new GeoPoint(54.31798,18.56858)));
@@ -94,11 +95,9 @@ public class MapStationDetail extends Fragment {
             TextView txtDescription = (TextView) mView.findViewById(R.id.bubble_description);
             TextView txtSubdescription = (TextView) mView.findViewById(R.id.bubble_subdescription);
 
-            for (int i = 0; i < stops.size(); i++) {
-                txtTitle.setText("Przystanek");
-                txtDescription.setText("Linie");
-                txtSubdescription.setText("przyjazd + opoznienie");
-            }
+            txtTitle.setText("Przystanek");
+            txtDescription.setText("Linie");
+            txtSubdescription.setText("przyjazd + opoznienie");
 
             layout.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
