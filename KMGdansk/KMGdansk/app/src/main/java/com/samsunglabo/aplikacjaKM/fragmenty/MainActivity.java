@@ -6,10 +6,10 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import net.simplifiedcoding.bottomnavigationexample.R;
+
+
 //implement the interface OnNavigationItemSelectedListener in your activity class
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,18 +17,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
 
         //loading the default fragment
-        loadFragment(new HomeFragment());
 
-        //getting bottom navigation view and attaching the listener
+        loadFragment(new HomeFragment());
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
+        //DataStorage.getInstance();
     }
 
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Fragment fragment = null;
-
         switch (item.getItemId()) {
             case R.id.tab_favorites:
                 fragment = new HomeFragment();

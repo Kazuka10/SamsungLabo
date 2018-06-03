@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.simplifiedcoding.bottomnavigationexample.R;
+
 
 /**
  * Created by Belal on 1/23/2018.
