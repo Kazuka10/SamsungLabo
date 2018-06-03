@@ -1,5 +1,6 @@
 package com.samsunglabo.aplikacjaKM.fragmenty;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
@@ -17,6 +18,7 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.MapEventsOverlay;
 import org.osmdroid.views.overlay.Marker;
+import org.osmdroid.views.overlay.Overlay;
 import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.infowindow.InfoWindow;
 import org.osmdroid.views.overlay.infowindow.MarkerInfoWindow;
@@ -29,6 +31,7 @@ public class MapStationDetail extends Fragment {
     private double mLat =  54.3495;
     private double mLon =  18.6490;
     private StationMarkerInfoWindow stationMarkerInfoWindow;
+    private ArrayList<OverlayItem> stops = new ArrayList<>();
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -43,42 +46,35 @@ public class MapStationDetail extends Fragment {
         mapView.getController().setZoom(17.0);
         mapView.getController().setCenter(startPoint);
 
-        final ArrayList<OverlayItem> items = new ArrayList<>();
-        items.add(new OverlayItem("Hannover", "SampleDescription", new GeoPoint(52.370816, 9.735936)));
-        items.add(new OverlayItem("Berlin", "SampleDescription", new GeoPoint(52.518333, 13.408333)));
-        items.add(new OverlayItem("Washington", "SampleDescription", new GeoPoint(38.895000, -77.036667)));
-        items.add(new OverlayItem("San Francisco", "SampleDescription", new GeoPoint(37.779300, -122.419200)));
-        items.add(new OverlayItem("Tolaga Bay", "SampleDescription", new GeoPoint(-38.371000, 178.298000)));
+        //ArrayList<OverlayItem> stops = new ArrayList<>();
+        stops.add(new OverlayItem("Jasień Pólnicy", "155, 161, 574", new GeoPoint(54.3502,18.6508)));
+        stops.add(new OverlayItem("Zakoniczyn", "295, N1", new GeoPoint(54.31981,18.57735)));
+        stops.add(new OverlayItem("Jaworzniaków", "156, 262, N1", new GeoPoint(54.31798,18.56858)));
+        stops.add(new OverlayItem("Lawendowe Wzgórze", "156, 174, 574, N4", new GeoPoint(54.33173,18.56353)));
+        stops.add(new OverlayItem("Wilanowska", "156, 162, 164, 174, 175, 195, 227, 262, N2, N13", new GeoPoint(54.33662,18.59828)));
+        stops.add(new OverlayItem("Politechnika SKM", "283", new GeoPoint(54.37393,18.62627)));
+        stops.add(new OverlayItem("Kampinoska", "113, 175, N13", new GeoPoint(54.31611,18.60301)));
+        stops.add(new OverlayItem("Olimpijska", "113, 213, N13", new GeoPoint(54.30558,18.58112)));
+        stops.add(new OverlayItem("Jeleniogórska", "118", new GeoPoint(54.32858,18.58237)));
+        stops.add(new OverlayItem("Ujeścisko", "118, 156, 164, 174, N4", new GeoPoint(54.33159,18.58486)));
+        stops.add(new OverlayItem("Przemyska", "118, 156, 162, 164, 174, 175, N2, N4, N13", new GeoPoint(54.33283,18.59461)));
+        stops.add(new OverlayItem("Kiełpino Górne (Węsierska)", "168, 268, N3", new GeoPoint(54.34195,18.49882)));
+        stops.add(new OverlayItem("Otomin Pętla", "174, 574", new GeoPoint(54.3214,18.50485)));
+        stops.add(new OverlayItem("Elfów", "155, 262, N1", new GeoPoint(54.31564,18.56977)));
 
-       // Marker startMarker = new Marker(mapView);
-       // startMarker.setPosition(startPoint);
-        //startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-       // mapView.getOverlays().add(startMarker);
-       // startMarker.setIcon(getResources().getDrawable(R.mipmap.ic_bustop));
-       // MarkerInfoWindow mDefaultInfoWindow = new MarkerInfoWindow(R.layout.dymek_mapa_przystanek, mapView);
+        Drawable bus_icon = this.getResources().getDrawable(R.drawable.ic_bustop);
 
-
-
-       // Marker marker = new Marker(mapView);
-      //  marker.setInfoWindow(stationMarkerInfoWindow);
-       // marker.setTitle("Start point2");
-
-        Marker startMarker = new Marker(mapView);
-        startMarker.setPosition(new GeoPoint(mLat,mLon));
-        startMarker.setIcon(getResources().getDrawable(R.mipmap.ic_bustop));
-        startMarker.setAnchor(Marker.ANCHOR_CENTER, 1.0f);
-        InfoWindow infoWindow = new MyInfoWindow(R.layout.bonuspack_bubble, mapView);
-        startMarker.setInfoWindow(infoWindow);
-        mapView.getOverlays().add(startMarker);
-
-        Marker startMarker2 = new Marker(mapView);
-        startMarker2.setPosition(new GeoPoint(54.3502,18.6508));
-        startMarker2.setIcon(getResources().getDrawable(R.mipmap.ic_bustop));
-        startMarker2.setAnchor(Marker.ANCHOR_CENTER, 1.0f);
-        InfoWindow infoWindow2 = new MyInfoWindow(R.layout.bonuspack_bubble, mapView);
-        startMarker2.setInfoWindow(infoWindow2);
-        mapView.getOverlays().add(startMarker2);
-
+        for(int i = 0; i < stops.size(); i++) {
+            OverlayItem stop = stops.get(i);
+            Marker stopMarker = new Marker(mapView);
+            stopMarker.setPosition((GeoPoint) stop.getPoint());
+            stopMarker.setIcon(bus_icon);
+            stopMarker.setAnchor(Marker.ANCHOR_CENTER, 1.0f);
+            stopMarker.setTitle(stops.get(i).getTitle());
+            InfoWindow infoWindow = new MyInfoWindow(R.layout.bonuspack_bubble, mapView);
+            stopMarker.setInfoWindow(infoWindow);
+            mapView.getOverlays().add(stopMarker);
+        }
 
         return view;
     }
@@ -98,9 +94,11 @@ public class MapStationDetail extends Fragment {
             TextView txtDescription = (TextView) mView.findViewById(R.id.bubble_description);
             TextView txtSubdescription = (TextView) mView.findViewById(R.id.bubble_subdescription);
 
-            txtTitle.setText("Nazwa Przystanku");
-            txtDescription.setText("Linia - kierunek");
-            txtSubdescription.setText("przyjazd + opoznienie");
+            for (int i = 0; i < stops.size(); i++) {
+                txtTitle.setText("Przystanek");
+                txtDescription.setText("Linie");
+                txtSubdescription.setText("przyjazd + opoznienie");
+            }
 
             layout.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
