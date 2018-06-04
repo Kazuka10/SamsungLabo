@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static org.junit.Assert.*;
+
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -31,15 +33,9 @@ public class ExampleUnitTest
         Map<String, Object> today = (Map<String, Object>) data.get(todayDate.toString(fmt));
         List<Map<String, Object>> stops = (ArrayList<Map<String, Object>>) today.get("stops");
 
-        int i = 1;
+        ArrayList<String> viewList = new ArrayList<String>();
+
         for (Map<String, Object> stop : stops)
-        {
-            System.out.println(i++ + ": ");
-
-            for (String key : stop.keySet())
-                System.out.println(key + ": " + stop.get(key));
-
-            System.out.println();
-        }
+            System.out.println((String) stop.get("stopDesc"));
     }
 }
