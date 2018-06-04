@@ -18,11 +18,7 @@ import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.infowindow.InfoWindow;
 import org.osmdroid.views.overlay.infowindow.MarkerInfoWindow;
 
-import net.simplifiedcoding.bottomnavigationexample.R;
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 
 public class MapStationDetail extends Fragment {
